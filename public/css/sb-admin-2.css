@@ -6384,6 +6384,16 @@ button.bg-primary:focus {
   background-color: #2653d4 !important;
 }
 
+.bg-buap {
+  background-color: #002D4A !important;
+}
+
+a.bg-buap:hover, a.bg-buap:focus,
+button.bg-buap:hover,
+button.bg-buap:focus {
+  background-color: #002D4A !important;
+}
+
 .bg-secondary {
   background-color: #858796 !important;
 }
@@ -9869,6 +9879,12 @@ a:focus {
   background-size: cover;
 }
 
+.bg-gradient-buap{
+  background-color: #002D4A;
+  background-image: linear-gradient(180deg, #002D4A 10%, #012136 100%);
+  background-size: cover;
+}
+
 .bg-gradient-secondary {
   background-color: #858796;
   background-image: linear-gradient(180deg, #858796 10%, #60616f 100%);
@@ -10824,8 +10840,31 @@ a:focus {
   }
 }
 
+.buap-login-logo {
+  display: block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  background-position: center;
+  background-size: cover;
+}
+
+.content-login{
+  display: block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .bg-login-image {
-  
+  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
   background-position: center;
   background-size: cover;
 }
