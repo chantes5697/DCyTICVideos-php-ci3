@@ -75,12 +75,12 @@
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
-                                                'name'          => 'username',
-                                                'id'            => 'username',
+                                                'name'          => 'formato',
+                                                'id'            => 'formato',
                                                 'type' => 'text',
-                                                'value' => $data['username'],
+                                                'value' => $data['formato'],
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Usuario'
+                                                'placeholder' => 'Formato'
                                         );
 
                                         echo form_input($datax);
@@ -89,31 +89,7 @@
 
 
                                     </div>
-                                    <div class="form-group">
-                                      <?php
-                                        $datax = array(
-                                                'name'          => 'password',
-                                                'id'            => 'password',
-                                                'type' => 'password',
 
-                                                'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Password'
-                                        );
-
-                                        echo form_input($datax);
-                                      ?>
-
-                                    </div>
-
-                                    <div class="form-group">
-                                      <select class="form-control user-select" name="rol">
-                                        <?php foreach ($roles as $rol ): ?>
-                                          <option value="<?php echo($rol['idrol']) ?>"><?php echo $rol['nombre'] ?></option>
-                                        <?php endforeach; ?>
-                                      </select>
-
-
-                                    </div>
 
                                     <input type="submit" name= 'submit' value="Crear usuario" class="btn btn-primary btn-user btn-block bg-buap">
 
@@ -126,7 +102,7 @@
                                 <?php
 
                                   $attributes = array('class' => 'user', 'id' => 'myform');
-                                  echo form_open('Administrador/crearUsuario', $attributes);
+                                  echo form_open('Administrador/crearFormato', $attributes);
                                 ?>
 
 
@@ -138,7 +114,7 @@
                                                 'id'            => 'username',
                                                 'type' => 'text',
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Usuario'
+
                                         );
 
                                         echo form_input($datax);
@@ -147,30 +123,7 @@
 
 
                                     </div>
-                                    <div class="form-group">
-                                      <?php
-                                        $datax = array(
-                                                'name'          => 'password',
-                                                'id'            => 'password',
-                                                'type' => 'password',
-                                                'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Password'
-                                        );
 
-                                        echo form_input($datax);
-                                      ?>
-
-                                    </div>
-
-                                    <div class="form-group">
-                                      <select class="form-control user-select" name="rol">
-                                        <?php foreach ($roles as $rol ): ?>
-                                          <option value="<?php echo($rol['idrol']) ?>"><?php echo $rol['nombre'] ?></option>
-                                        <?php endforeach; ?>
-                                      </select>
-
-
-                                    </div>
 
                                     <input type="submit" name= 'submit' value="Crear usuario" class="btn btn-primary btn-user btn-block bg-buap">
 

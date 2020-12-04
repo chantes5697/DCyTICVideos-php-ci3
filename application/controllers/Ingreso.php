@@ -54,7 +54,8 @@ class Ingreso extends CI_Controller {
               'password' => $this->input->post('password')
             );
             $query = $this->IngresoModel->get_num_usuarios($data['username']);
-            if($query == 0){
+
+            if($query[0]['c'] == 0){
               $errorx = "usuario incorrecto";
               $datax = array(
                 'error' => $errorx
@@ -66,7 +67,7 @@ class Ingreso extends CI_Controller {
             else{
               $query2 = $this->IngresoModel->login($data);
 
-
+              
               $password = $query2[0]['password'];
 
               $this->load->library('bcrypt');

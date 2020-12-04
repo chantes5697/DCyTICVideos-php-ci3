@@ -6,7 +6,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function get_num_usuarios($data){
             $this->db->select('count(*) as c');
             $this->db->from('usuario');
-            $this->db->where('username',$data);
+
+            $array = array(
+              'username' => $data,
+              'estado' => 1
+            ) ;
+            $this->db->where($array);
             return $this->db->get()->result_array();
       }
 
@@ -17,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       $estado = 1;
       $this->db->where('estado', $estado);
       return $this->db->get()->result_array();
-      
+
     }
 
 

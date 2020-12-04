@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCyTICVideos - Crear Usuario</title>
+    <title>DCyTICVideos - Editar Usuario</title>
 
 
     <!-- Custom fonts for this template -->
@@ -67,20 +67,22 @@
                                 <?php
 
                                   $attributes = array('class' => 'user', 'id' => 'myform');
-                                  echo form_open('Administrador/crearUsuario', $attributes);
+                                  echo form_open('Administrador/editarUsuario/'.$id, $attributes);
                                 ?>
 
 
 
                                     <div class="form-group">
                                       <?php
+                                      //var_dump($data);
                                         $datax = array(
                                                 'name'          => 'username',
                                                 'id'            => 'username',
                                                 'type' => 'text',
                                                 'value' => $data['username'],
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Usuario'
+                                                'placeholder' => 'Usuario',
+                                                'readonly'=>'readonly'
                                         );
 
                                         echo form_input($datax);
@@ -91,6 +93,7 @@
                                     </div>
                                     <div class="form-group">
                                       <?php
+
                                         $datax = array(
                                                 'name'          => 'password',
                                                 'id'            => 'password',
