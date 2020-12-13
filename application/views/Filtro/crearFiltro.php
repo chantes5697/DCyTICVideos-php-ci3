@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCyTICVideos - Editar Formato</title>
+    <title>DCyTICVideos - Crear Evento</title>
 
 
     <!-- Custom fonts for this template -->
@@ -44,7 +44,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Formatos</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Eventos</h1>
 
 
                     <!-- DataTales Example -->
@@ -67,22 +67,20 @@
                                 <?php
 
                                   $attributes = array('class' => 'user', 'id' => 'myform');
-                                  echo form_open('Administrador/editarFormato/'.$id, $attributes);
+                                  echo form_open('Administrador/crearFiltro/', $attributes);
                                 ?>
 
 
 
                                     <div class="form-group">
                                       <?php
-                                      //var_dump($data);
                                         $datax = array(
-                                                'name'          => 'username',
-                                                'id'            => 'username',
+                                                'name'          => 'contenido',
+                                                'id'            => 'contenido',
                                                 'type' => 'text',
-                                                'value' => $data['username'],
+                                                'value' => $data['contenido'],
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Formato',
-                                                'readonly'=>'readonly'
+                                                'placeholder' => 'contenido'
                                         );
 
                                         echo form_input($datax);
@@ -91,34 +89,56 @@
 
 
                                     </div>
+
                                     <div class="form-group">
                                       <?php
-
+                                        //var_dump($data['fecha']);
                                         $datax = array(
-                                                'name'          => 'password',
-                                                'id'            => 'password',
-                                                'type' => 'password',
-
+                                                'name'          => 'fecha',
+                                                'id'            => 'fecha',
+                                                'type' => 'date',
+                                                'value' => $data['fecha'],
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Password'
+                                                'placeholder' => 'Fecha'
                                         );
 
                                         echo form_input($datax);
                                       ?>
 
+
+
                                     </div>
 
                                     <div class="form-group">
-                                      <select class="form-control user-select" name="rol">
-                                        <?php foreach ($roles as $rol ): ?>
-                                          <option value="<?php echo($rol['idrol']) ?>"><?php echo $rol['nombre'] ?></option>
+                                      <?php
+                                        $datax = array(
+                                                'name'          => 'tiempo',
+                                                'id'            => 'tiempo',
+                                                'type' => 'tiempo',
+                                                'value' => $data['tiempo'],
+                                                'class' => 'form-control form-control-user',
+                                                'placeholder' => 'Fecha'
+                                        );
+
+                                        echo form_input($datax);
+                                      ?>
+
+
+
+                                    </div>
+
+
+                                    <div class="form-group">
+                                      <select class="form-control user-select" name="video">
+                                        <?php foreach ($videos as $rol ): ?>
+                                          <option value="<?php echo($rol['idvideos']) ?>"><?php echo $rol['contenido'] ?></option>
                                         <?php endforeach; ?>
                                       </select>
 
 
                                     </div>
 
-                                    <input type="submit" name= 'submit' value="Crear Formato" class="btn btn-primary btn-user btn-block bg-buap">
+                                    <input type="submit" name= 'submit' value="Crear Evento" class="btn btn-primary btn-user btn-block bg-buap">
 
 
 
@@ -129,7 +149,7 @@
                                 <?php
 
                                   $attributes = array('class' => 'user', 'id' => 'myform');
-                                  echo form_open('Administrador/crearFormato', $attributes);
+                                  echo form_open('Administrador/crearFiltro', $attributes);
                                 ?>
 
 
@@ -137,11 +157,11 @@
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
-                                                'name'          => 'username',
-                                                'id'            => 'username',
+                                                'name'          => 'contenido',
+                                                'id'            => 'contenido',
                                                 'type' => 'text',
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Formato'
+                                                'placeholder' => 'Contenido'
                                         );
 
                                         echo form_input($datax);
@@ -153,29 +173,48 @@
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
-                                                'name'          => 'password',
-                                                'id'            => 'password',
-                                                'type' => 'password',
+                                                'name'          => 'fecha',
+                                                'id'            => 'fecha',
+                                                'type' => 'date',
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Password'
+                                                'placeholder' => 'Fecha'
                                         );
 
                                         echo form_input($datax);
                                       ?>
 
+
+
                                     </div>
 
                                     <div class="form-group">
-                                      <select class="form-control user-select" name="rol">
-                                        <?php foreach ($roles as $rol ): ?>
-                                          <option value="<?php echo($rol['idrol']) ?>"><?php echo $rol['nombre'] ?></option>
+                                      <?php
+                                        $datax = array(
+                                                'name'          => 'tiempo',
+                                                'id'            => 'tiempo',
+                                                'type' => 'time',
+                                                'class' => 'form-control form-control-user',
+                                                'placeholder' => 'Tiempo'
+                                        );
+
+                                        echo form_input($datax);
+                                      ?>
+
+
+
+                                    </div>
+
+                                    <div class="form-group">
+                                      <select class="form-control user-select" name="video">
+                                        <?php foreach ($videos as $rol ): ?>
+                                          <option value="<?php echo($rol['idvideo']) ?>"><?php echo $rol['contenido'] ?></option>
                                         <?php endforeach; ?>
                                       </select>
 
 
                                     </div>
 
-                                    <input type="submit" name= 'submit' value="Crear Formato" class="btn btn-primary btn-user btn-block bg-buap">
+                                    <input type="submit" name= 'submit' value="Crear Evento" class="btn btn-primary btn-user btn-block bg-buap">
 
 
 

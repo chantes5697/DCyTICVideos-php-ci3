@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCyTICVideos - Editar Formato</title>
+    <title>DCyTICVideos - Crear Cassette</title>
 
 
     <!-- Custom fonts for this template -->
@@ -44,7 +44,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Formatos</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Cassettes</h1>
 
 
                     <!-- DataTales Example -->
@@ -67,22 +67,20 @@
                                 <?php
 
                                   $attributes = array('class' => 'user', 'id' => 'myform');
-                                  echo form_open('Administrador/editarFormato/'.$id, $attributes);
+                                  echo form_open('Administrador/crearCassette', $attributes);
                                 ?>
 
 
 
                                     <div class="form-group">
                                       <?php
-                                      //var_dump($data);
                                         $datax = array(
-                                                'name'          => 'username',
-                                                'id'            => 'username',
+                                                'name'          => 'clave',
+                                                'id'            => 'clave',
                                                 'type' => 'text',
-                                                'value' => $data['username'],
+                                                'value' => $data['clave'],
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Formato',
-                                                'readonly'=>'readonly'
+                                                'placeholder' => 'clave'
                                         );
 
                                         echo form_input($datax);
@@ -91,34 +89,19 @@
 
 
                                     </div>
-                                    <div class="form-group">
-                                      <?php
 
-                                        $datax = array(
-                                                'name'          => 'password',
-                                                'id'            => 'password',
-                                                'type' => 'password',
-
-                                                'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Password'
-                                        );
-
-                                        echo form_input($datax);
-                                      ?>
-
-                                    </div>
 
                                     <div class="form-group">
-                                      <select class="form-control user-select" name="rol">
-                                        <?php foreach ($roles as $rol ): ?>
-                                          <option value="<?php echo($rol['idrol']) ?>"><?php echo $rol['nombre'] ?></option>
+                                      <select class="form-control user-select" name="formato">
+                                        <?php foreach ($formatos as $rol ): ?>
+                                          <option value="<?php echo($rol['idformato']) ?>"><?php echo $rol['nombre'] ?></option>
                                         <?php endforeach; ?>
                                       </select>
 
 
                                     </div>
 
-                                    <input type="submit" name= 'submit' value="Crear Formato" class="btn btn-primary btn-user btn-block bg-buap">
+                                    <input type="submit" name= 'submit' value="Crear Cassette" class="btn btn-primary btn-user btn-block bg-buap">
 
 
 
@@ -129,7 +112,7 @@
                                 <?php
 
                                   $attributes = array('class' => 'user', 'id' => 'myform');
-                                  echo form_open('Administrador/crearFormato', $attributes);
+                                  echo form_open('Administrador/crearCassette', $attributes);
                                 ?>
 
 
@@ -137,11 +120,11 @@
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
-                                                'name'          => 'username',
-                                                'id'            => 'username',
+                                                'name'          => 'clave',
+                                                'id'            => 'clave',
                                                 'type' => 'text',
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Formato'
+                                                'placeholder' => 'Clave'
                                         );
 
                                         echo form_input($datax);
@@ -151,31 +134,21 @@
 
                                     </div>
                                     <div class="form-group">
-                                      <?php
-                                        $datax = array(
-                                                'name'          => 'password',
-                                                'id'            => 'password',
-                                                'type' => 'password',
-                                                'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Password'
-                                        );
 
-                                        echo form_input($datax);
-                                      ?>
 
                                     </div>
 
                                     <div class="form-group">
-                                      <select class="form-control user-select" name="rol">
-                                        <?php foreach ($roles as $rol ): ?>
-                                          <option value="<?php echo($rol['idrol']) ?>"><?php echo $rol['nombre'] ?></option>
+                                      <select class="form-control user-select" name="formato">
+                                        <?php foreach ($formatos as $rol ): ?>
+                                          <option value="<?php echo($rol['idformato']) ?>"><?php echo $rol['nombre'] ?></option>
                                         <?php endforeach; ?>
                                       </select>
 
 
                                     </div>
 
-                                    <input type="submit" name= 'submit' value="Crear Formato" class="btn btn-primary btn-user btn-block bg-buap">
+                                    <input type="submit" name= 'submit' value="Crear Cassette" class="btn btn-primary btn-user btn-block bg-buap">
 
 
 

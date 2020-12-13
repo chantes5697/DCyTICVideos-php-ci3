@@ -44,7 +44,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Usuarios</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Formatos</h1>
 
 
                     <!-- DataTales Example -->
@@ -58,7 +58,7 @@
                                         <tr>
                                             <th style="text-align: center;">Formato</th>
 
-                                            <th style="text-align: center;">Editar</th>
+                                            
                                             <th style="text-align: center;">Estado</th>
                                             <th style="text-align: center;">Habilitar/Deshabilitar</th>
                                         </tr>
@@ -70,7 +70,7 @@
                                           <tr>
                                               <td style="text-align: center;"><?php echo($key['nombre']) ?></td>
 
-                                               <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/editarFormato/'.$key['idformato']); ?>" ><i class="fas fa-edit"></i></a></td>
+
                                                <?php if ($key['estado'] == 1): ?>
                                                  <td style="text-align: center;">Habilitado</td>
                                                  <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/deleteFormato/'.$key['idformato']); ?>" ><i class="fa fa-times"></i></a></td>

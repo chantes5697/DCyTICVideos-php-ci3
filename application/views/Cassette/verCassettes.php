@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCyTICVideos - Ver Usuarios</title>
+    <title>DCyTICVideos - Ver Cassettes</title>
 
 
     <!-- Custom fonts for this template -->
@@ -44,7 +44,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Usuarios</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Cassettes</h1>
 
 
                     <!-- DataTales Example -->
@@ -56,8 +56,8 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th style="text-align: center;">Username</th>
-                                            <th style="text-align: center;">Rol</th>
+                                            <th style="text-align: center;">Clave</th>
+                                            <th style="text-align: center;">Formato</th>
                                             <th style="text-align: center;">Editar</th>
                                             <th style="text-align: center;">Estado</th>
                                             <th style="text-align: center;">Habilitar/Deshabilitar</th>
@@ -68,16 +68,16 @@
                                       <?php if(isset($data)): ?>
                                         <?php foreach ($data as $key): ?>
                                           <tr>
-                                              <td style="text-align: center;"><?php echo($key['username']) ?></td>
-                                              <td style="text-align: center;" ><?php echo $key['rol']; ?></td>
-                                              
-                                               <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/editarUsuario/'.$key['idusr']); ?>" ><i class="fas fa-edit"></i></a></td>
+                                              <td style="text-align: center;"><?php echo($key['clave']) ?></td>
+                                              <td style="text-align: center;" ><?php echo $key['formato']; ?></td>
+
+                                               <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/editarCassette/'.$key['idcassette']); ?>" ><i class="fas fa-edit"></i></a></td>
                                                <?php if ($key['estado'] == 1): ?>
                                                  <td style="text-align: center;">Habilitado</td>
-                                                 <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/deleteUsuario/'.$key['idusr']); ?>" ><i class="fa fa-times"></i></a></td>
+                                                 <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/deleteCassette/'.$key['idcassette']); ?>" ><i class="fa fa-times"></i></a></td>
                                                <?php else: ?>
                                                  <td style="text-align: center;">Deshabilitado</td>
-                                                 <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/habilitarUsuario/'.$key['idusr']); ?>" ><i class="fa fa-check"></i></a></td>
+                                                 <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/habilitarCassette/'.$key['idcassette']); ?>" ><i class="fa fa-check"></i></a></td>
                                                <?php endif; ?>
                                           </tr>
                                         <?php endforeach; ?>

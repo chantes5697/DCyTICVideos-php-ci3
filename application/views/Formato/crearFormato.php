@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCyTICVideos - Crear Usuario</title>
+    <title>DCyTICVideos - Crear Formato</title>
 
 
     <!-- Custom fonts for this template -->
@@ -44,7 +44,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Usuarios</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Formatos</h1>
 
 
                     <!-- DataTales Example -->
@@ -67,7 +67,7 @@
                                 <?php
 
                                   $attributes = array('class' => 'user', 'id' => 'myform');
-                                  echo form_open('Administrador/crearUsuario', $attributes);
+                                  echo form_open('Administrador/crearFormato', $attributes);
                                 ?>
 
 
@@ -91,7 +91,7 @@
                                     </div>
 
 
-                                    <input type="submit" name= 'submit' value="Crear usuario" class="btn btn-primary btn-user btn-block bg-buap">
+                                    <input type="submit" name= 'submit' value="Crear Formato" class="btn btn-primary btn-user btn-block bg-buap">
 
 
 
@@ -110,11 +110,12 @@
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
-                                                'name'          => 'username',
-                                                'id'            => 'username',
+                                                'name'          => 'formato',
+                                                'id'            => 'formato',
                                                 'type' => 'text',
+                                                
                                                 'class' => 'form-control form-control-user',
-
+                                                'placeholder' => 'Formato'
                                         );
 
                                         echo form_input($datax);
@@ -125,7 +126,7 @@
                                     </div>
 
 
-                                    <input type="submit" name= 'submit' value="Crear usuario" class="btn btn-primary btn-user btn-block bg-buap">
+                                    <input type="submit" name= 'submit' value="Crear Formato" class="btn btn-primary btn-user btn-block bg-buap">
 
 
 

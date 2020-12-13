@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCyTICVideos - Ver Usuarios</title>
+    <title>DCyTICVideos - Ver Videos</title>
 
 
     <!-- Custom fonts for this template -->
@@ -44,7 +44,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Usuarios</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Videos</h1>
 
 
                     <!-- DataTales Example -->
@@ -56,8 +56,10 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th style="text-align: center;">Username</th>
-                                            <th style="text-align: center;">Rol</th>
+                                            <th style="text-align: center;">Contenido</th>
+                                            <th style="text-align: center;">Cassette</th>
+                                            <th style="text-align: center;">Fecha</th>
+                                            <th style="text-align: center;">Duración</th>
                                             <th style="text-align: center;">Editar</th>
                                             <th style="text-align: center;">Estado</th>
                                             <th style="text-align: center;">Habilitar/Deshabilitar</th>
@@ -68,17 +70,18 @@
                                       <?php if(isset($data)): ?>
                                         <?php foreach ($data as $key): ?>
                                           <tr>
-                                              <td style="text-align: center;"><?php echo($key['username']) ?></td>
-                                              <td style="text-align: center;" ><?php echo $key['rol']; ?></td>
-                                              
-                                               <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/editarUsuario/'.$key['idusr']); ?>" ><i class="fas fa-edit"></i></a></td>
-                                               <?php if ($key['estado'] == 1): ?>
-                                                 <td style="text-align: center;">Habilitado</td>
-                                                 <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/deleteUsuario/'.$key['idusr']); ?>" ><i class="fa fa-times"></i></a></td>
-                                               <?php else: ?>
-                                                 <td style="text-align: center;">Deshabilitado</td>
-                                                 <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/habilitarUsuario/'.$key['idusr']); ?>" ><i class="fa fa-check"></i></a></td>
-                                               <?php endif; ?>
+                                              <td style="text-align: center;"><?php echo($key['contenido']) ?></td>
+                                              <td style="text-align: center;" ><?php echo $key['cassette']; ?></td>
+                                              <td style="text-align: center;" ><?php echo $key['fecha']; ?></td>
+                                              <td style="text-align: center;" ><?php echo $key['duracion']; ?></td>
+                                              <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/editarVideo/'.$key['idvideo']); ?>" ><i class="fas fa-edit"></i></a></td>
+                                              <?php if ($key['estado'] == 1): ?>
+                                                <td style="text-align: center;">Habilitado</td>
+                                                <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/deleteVideo/'.$key['idvideo']); ?>" ><i class="fa fa-times"></i></a></td>
+                                              <?php else: ?>
+                                               <td style="text-align: center;">Deshabilitado</td>
+                                               <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/habilitarVideo/'.$key['idvideo']); ?>" ><i class="fa fa-check"></i></a></td>
+                                              <?php endif; ?>
                                           </tr>
                                         <?php endforeach; ?>
                                       <?php endif; ?>

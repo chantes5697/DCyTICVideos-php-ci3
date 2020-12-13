@@ -11,6 +11,7 @@ class Ingreso extends CI_Controller {
             $this->load->model('IngresoModel');
             $this->load->helper('url_helper');
             $this->load->helper('form');
+            
     }
 
 
@@ -67,7 +68,7 @@ class Ingreso extends CI_Controller {
             else{
               $query2 = $this->IngresoModel->login($data);
 
-              
+
               $password = $query2[0]['password'];
 
               $this->load->library('bcrypt');
