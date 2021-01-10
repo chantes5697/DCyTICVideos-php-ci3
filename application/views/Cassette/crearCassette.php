@@ -172,7 +172,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php $this->load->view('Layout/footer') ?>
+            <?php //$this->load->view('Layout/footer') ?>
             <!-- End of Footer -->
 
         </div>

@@ -170,6 +170,12 @@
 
 
                                     </div>
+
+                                    <div class='form-group'>
+                                        <?php echo form_label('Fecha', 'fecha');?>
+                                    </div>
+
+
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
@@ -187,6 +193,11 @@
 
                                     </div>
 
+                                    <div class='form-group'>
+                                        <?php echo form_label('Tiempo', 'tiempo');?>
+                                    </div>
+
+
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
@@ -194,6 +205,7 @@
                                                 'id'            => 'tiempo',
                                                 'type' => 'time',
                                                 'class' => 'form-control form-control-user',
+                                                'step' => '2',
                                                 'placeholder' => 'Tiempo'
                                         );
 
@@ -238,7 +250,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php $this->load->view('Layout/footer') ?>
+            <?php //$this->load->view('Layout/footer') ?>
             <!-- End of Footer -->
 
         </div>

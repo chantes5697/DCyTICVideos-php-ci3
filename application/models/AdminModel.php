@@ -3,6 +3,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   class AdminModel extends CI_Model{
 
+    public function get_videos_by_cassette($id){
+      $this->db->select('idvideo');
+      $this->db->from('video');
+      $this->db->where('cassette',$id);
+      return $this->db->get()->result_array();
+    }
+
+    public function get_events_by_video($id){
+      $this->db->select('*');
+      $this->db->from('filtro');
+      $this->db->where('video',$id);
+      return $this->db->get()->result_array();
+    }
+
     //get relation by id
     public function get_formato_by_id($id){
         $this->db->select('nombre');

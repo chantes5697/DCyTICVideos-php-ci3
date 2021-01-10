@@ -17,6 +17,7 @@ class Administrador extends CI_Controller {
             if($_SESSION['tipo'] != 1){
               redirect('Ingreso/ingreso', 'refresh');
             }
+            date_default_timezone_set ( 'America/Mexico_City'); 
     }
     //------------------------------------------------------------------------------------------
     //------------------------------------------------------------------------------------------
@@ -29,6 +30,40 @@ class Administrador extends CI_Controller {
     //------------------------------------------------------------------------------------------
     //------------------------------------------------------------------------------------------
     //------------------------------------------------------------------------------------------
+    public function cerrarSesion(){
+      session_destroy();
+      redirect('Ingreso/ingreso', 'refresh');
+    }
+
+    public function reportepdf($cid){
+      $datac = $this->AdminModel->getCassette($cid);
+      $formato = $this->AdminModel->get_formato_by_id($cid);
+      $datac[0]['formato'] = $formato[0]['nombre'];
+      $datav = $this->AdminModel->get_videos_by_cassette($cid);
+      $dataf = array();
+      foreach ($datav as $key ) {
+        # code...
+        $array = $this->AdminModel->get_events_by_video($key['idvideo']);
+        array_push($dataf,$array);
+      }
+
+      $data = array(
+        'datac' => $datac,
+        'datae' => $dataf
+      );
+
+      
+        $html = $this->load->view('Pdf/reportepdf', $data, true);
+        
+
+        $this->load->library('pdfgenerator');
+        // definamos un nombre para el archivo. No es necesario agregar la extension .pdf
+        $filename = 'reporte'.$datac[0]['clave'];
+        // generamos el PDF. Pasemos por encima de la configuración general y definamos otro tipo de papel
+        $this->pdfgenerator->generate($html, $filename, true, 'Letter', 'portrait');
+      //$this->load->view('Pdf/reportepdf', $data);
+    }
+
     public function verUsuarios(){
       $datax = $this->AdminModel->getUsuarios();
       if($datax){

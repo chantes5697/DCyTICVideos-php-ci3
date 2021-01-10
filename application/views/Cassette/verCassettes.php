@@ -58,6 +58,7 @@
                                         <tr>
                                             <th style="text-align: center;">Clave</th>
                                             <th style="text-align: center;">Formato</th>
+                                            <th style="text-align: center;">Reporte</th>
                                             <th style="text-align: center;">Editar</th>
                                             <th style="text-align: center;">Estado</th>
                                             <th style="text-align: center;">Habilitar/Deshabilitar</th>
@@ -70,7 +71,7 @@
                                           <tr>
                                               <td style="text-align: center;"><?php echo($key['clave']) ?></td>
                                               <td style="text-align: center;" ><?php echo $key['formato']; ?></td>
-
+                                              <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/reportepdf/'.$key['idcassette']); ?>" ><i class="fas fa-clipboard-list"></i></a></td>
                                                <td style="text-align: center;"><a  href = "<?php echo base_url('Administrador/editarCassette/'.$key['idcassette']); ?>" ><i class="fas fa-edit"></i></a></td>
                                                <?php if ($key['estado'] == 1): ?>
                                                  <td style="text-align: center;">Habilitado</td>

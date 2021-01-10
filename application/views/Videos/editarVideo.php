@@ -90,6 +90,10 @@
 
                                     </div>
 
+                                    <div class='form-group'>
+                                        <?php echo form_label('Fecha', 'fecha');?>
+                                    </div>
+
                                     <div class="form-group">
                                       <?php
                                         //var_dump($data['fecha']);
@@ -107,6 +111,10 @@
 
 
 
+                                    </div>
+
+                                    <div class='form-group'>
+                                        <?php echo form_label('Tiempo', 'duracion');?>
                                     </div>
 
                                     <div class="form-group">
@@ -194,7 +202,8 @@
                                                 'id'            => 'duracion',
                                                 'type' => 'time',
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Fecha'
+                                                'step' => '2',
+                                                'placeholder' => 'Duracion'
                                         );
 
                                         echo form_input($datax);
@@ -238,7 +247,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php $this->load->view('Layout/footer') ?>
+            <?php //$this->load->view('Layout/footer') ?>
             <!-- End of Footer -->
 
         </div>

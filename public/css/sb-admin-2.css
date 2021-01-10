@@ -32,7 +32,7 @@
   --danger: #e74a3b;
   --light: #f8f9fc;
   --dark: #5a5c69;
-  --buap: #002D4A;
+  --buap: #003b5c;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -6385,13 +6385,13 @@ button.bg-primary:focus {
 }
 
 .bg-buap {
-  background-color: #002D4A !important;
+  background-color: #003b5c !important;
 }
 
 a.bg-buap:hover, a.bg-buap:focus,
 button.bg-buap:hover,
 button.bg-buap:focus {
-  background-color: #002D4A !important;
+  background-color: #003b5c !important;
 }
 
 .bg-secondary {
@@ -9880,8 +9880,8 @@ a:focus {
 }
 
 .bg-gradient-buap{
-  background-color: #002D4A;
-  background-image: linear-gradient(180deg, #002D4A 10%, #012136 100%);
+  background-color: #003b5c;
+  background-image: linear-gradient(180deg, #003b5c 10%, #012136 100%);
   background-size: cover;
 }
 

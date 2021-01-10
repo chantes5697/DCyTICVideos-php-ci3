@@ -90,6 +90,11 @@
 
                                     </div>
 
+                                    <div class='form-group'>
+                                        <?php echo form_label('Fecha', 'fecha');?>
+                                    </div>
+
+
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
@@ -108,6 +113,11 @@
 
                                     </div>
 
+                                    <div class='form-group'>
+                                        <?php echo form_label('Tiempo', 'duracion');?>
+                                    </div>
+
+
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
@@ -116,7 +126,8 @@
                                                 'type' => 'time',
                                                 'value' => $data['duracion'],
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Fecha'
+                                                'step' => '2',
+                                                'placeholder' => 'Duracion'
                                         );
 
                                         echo form_input($datax);
@@ -169,6 +180,11 @@
 
 
                                     </div>
+
+                                    <div class='form-group'>
+                                        <?php echo form_label('Fecha', 'fecha');?>
+                                    </div>
+
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
@@ -186,6 +202,10 @@
 
                                     </div>
 
+                                    <div class='form-group'>
+                                        <?php echo form_label('Tiempo', 'duracion');?>
+                                    </div>
+
                                     <div class="form-group">
                                       <?php
                                         $datax = array(
@@ -193,7 +213,8 @@
                                                 'id'            => 'duracion',
                                                 'type' => 'time',
                                                 'class' => 'form-control form-control-user',
-                                                'placeholder' => 'Fecha'
+                                                'step' => '2',
+                                                'placeholder' => 'Duracion'
                                         );
 
                                         echo form_input($datax);
@@ -237,7 +258,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php $this->load->view('Layout/footer') ?>
+            <?php //$this->load->view('Layout/footer') ?>
             <!-- End of Footer -->
 
         </div>
