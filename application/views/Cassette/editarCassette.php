@@ -67,7 +67,7 @@
                                  <?php
 
                                   $attributes = array('class' => 'user', 'id' => 'myform');
-                                  echo form_open('Administrador/crearCassette', $attributes);
+                                  echo form_open('Administrador/editarCassette/'.$id, $attributes);
                                 ?>
 
 
