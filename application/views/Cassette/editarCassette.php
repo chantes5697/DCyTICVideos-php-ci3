@@ -64,78 +64,42 @@
                               <?php endif; ?>
 
                               <?php if (isset($data)): ?>
-                                <?php
+                                 <?php
 
                                   $attributes = array('class' => 'user', 'id' => 'myform');
-                                  echo form_open('Administrador/editarCassette/'.$id, $attributes);
+                                  echo form_open('Administrador/crearCassette', $attributes);
                                 ?>
 
 
 
-                                <div class="form-group">
-                                  <?php
-                                    $datax = array(
-                                            'name'          => 'contenido',
-                                            'id'            => 'contenido',
-                                            'type' => 'text',
-                                            'value' => $data['contenido'],
-                                            'class' => 'form-control form-control-user',
-                                            'placeholder' => 'contenido'
-                                    );
+                                    <div class="form-group">
+                                      <?php
+                                        $datax = array(
+                                                'name'          => 'clave',
+                                                'id'            => 'clave',
+                                                'type' => 'text',
+                                                'value' => $data['clave'],
+                                                'class' => 'form-control form-control-user',
+                                                'placeholder' => 'clave'
+                                        );
 
-                                    echo form_input($datax);
-                                  ?>
-
-
-
-                                </div>
-
-                                <div class="form-group">
-                                  <?php
-                                    $datax = array(
-                                            'name'          => 'fecha',
-                                            'id'            => 'fecha',
-                                            'type' => 'date',
-                                            'value' => $data['fecha'],
-                                            'class' => 'form-control form-control-user',
-                                            'placeholder' => 'Fecha'
-                                    );
-
-                                    echo form_input($datax);
-                                  ?>
+                                        echo form_input($datax);
+                                      ?>
 
 
 
-                                </div>
-
-                                <div class="form-group">
-                                  <?php
-                                    $datax = array(
-                                            'name'          => 'duracion',
-                                            'id'            => 'duracion',
-                                            'type' => 'time',
-                                            'value' => $data['duracion'],
-                                            'class' => 'form-control form-control-user',
-                                            'placeholder' => 'Fecha'
-                                    );
-
-                                    echo form_input($datax);
-                                  ?>
+                                    </div>
 
 
-
-                                </div>
-
-
-                                <div class="form-group">
-                                  <select class="form-control user-select" name="cassette">
-                                    <?php foreach ($cassettes as $rol ): ?>
-                                      <option value="<?php echo($rol['idcassette']) ?>"><?php echo $rol['clave'] ?></option>
-                                    <?php endforeach; ?>
-                                  </select>
+                                    <div class="form-group">
+                                      <select class="form-control user-select" name="formato">
+                                        <?php foreach ($formatos as $rol ): ?>
+                                          <option value="<?php echo($rol['idformato']) ?>"><?php echo $rol['nombre'] ?></option>
+                                        <?php endforeach; ?>
+                                      </select>
 
 
-                                </div>
+                                    </div>
 
                                     <input type="submit" name= 'submit' value="Crear Cassette" class="btn btn-primary btn-user btn-block bg-buap">
 

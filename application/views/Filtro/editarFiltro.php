@@ -131,7 +131,7 @@
                                     <div class="form-group">
                                       <select class="form-control user-select" name="contenido">
                                         <?php foreach ($videos as $rol ): ?>
-                                          <option value="<?php echo($rol['idvideos']) ?>"><?php echo $rol['contenido'] ?></option>
+                                          <option value="<?php echo($rol['idvideo']) ?>"><?php echo $rol['contenido'] ?></option>
                                         <?php endforeach; ?>
                                       </select>
 
@@ -217,7 +217,9 @@
                                     </div>
 
                                     <div class="form-group">
+                                    
                                       <select class="form-control user-select" name="video">
+                                     
                                         <?php foreach ($videos as $rol ): ?>
                                           <option value="<?php echo($rol['idvideo']) ?>"><?php echo $rol['contenido'] ?></option>
                                         <?php endforeach; ?>
